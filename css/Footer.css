@@ -1,0 +1,51 @@
+/* Contact Section start */
+.contact-section {
+  display: flex;
+  padding: 2rem 0 2rem;
+  background-color: #33cc99;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contact-section .right-section {
+  display: flex;
+  gap: 0.5rem;
+  width: 25rem;
+}
+
+.contact-section .school-logo img {
+  height: 7rem;
+}
+
+.contact-section .maps iframe {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  justify-content: right;
+}
+/* Contact Section end */
+
+  /* Tablet */
+  @media (max-width: 840px) {
+    html {
+      font-size: 70%;
+    }
+
+    .contact-section .maps iframe {
+      width: 25vh;
+      height: 18vh;
+    }
+  }
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact-section .maps iframe {
+    width: 18vh;
+    height: 12vh;
+  }
+}

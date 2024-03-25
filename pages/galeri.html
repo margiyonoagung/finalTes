@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/galery.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- navbart star -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo"><img src="../img/logosekolah.png" /></a>
+    <div class="navbar-nav">
+      <a href="#">Beranda</a>
+      <a href="galeri.html"> Galeri</a>
+      <a href="profile.html">Profil</a>
+      <a href="registration.html">Pendaftaran</a>
+    </div>
+    <div class="navbar-extra">
+      <a href="#" id="search"><i data-feather="search"></i></a>
+      <a href="#" id="menu"><i data-feather="menu"></i></a>
+    </div>
+  </nav>
+  <!-- navbart end -->
+  <!-- Galeri Start -->
+  <section class="galeri">
+    <h2>Galeri</h2>
+    <div class="galeri-nav">
+      <ul class="filter">
+        <li class="active">Galeri All</li>
+        <li>Galeri Sekolah</li>
+        <li>Galeri Prestasi</li>
+        <li>Galeri Extrakulikuler</li>
+      </ul>
+    </div>
+
+    <div class="galeri-content">
+      <div class="content" data-filter="galeri sekolah">
+
+        <div class="imgGaleri">
+          <div class="box">
+            <img src="../img/sekolah1.jpg" />
+          </div>
+          <div class="box">
+            <img src="../img/sekolah2.jpg" />
+          </div>
+          <div class="box">
+            <img src="../img/sekolah3.jpg" />
+          </div>
+          <div class="box">
+            <img src="../img/sekolah4.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="content" data-filter="galeri prestasi">
+      <div class="imgGaleri">
+        <div class="box">
+          <img src="../img/prestasi1.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/prestasi2.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/prestasi3.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/prestasi4.jpg" />
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="content" data-filter="galeri extrakulikuler">
+      <div class="imgGaleri">
+        <div class="box">
+          <img src="../img/berenang.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/berkuda.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/futsal.jpg" />
+        </div>
+        <div class="box">
+          <img src="../img/habsy.jpeg" />
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- galeri End -->
+  </section>
+
+  <script>
+    const catagoryGaleri = document.querySelectorAll(".filter li");
+    const catagoryPost = document.querySelectorAll(".content");
+    catagoryGaleri.forEach((li) => {
+      li.onclick = function () {
+        //active
+        catagoryGaleri.forEach((li) => {
+          li.className = "";
+        });
+        li.className = "active";
+
+        console.log(li.textContent);
+        const value = li.textContent;
+        catagoryPost.forEach((content) => {
+          content.classList.add("hide");
+          //                console.log(content.getAttribute('data-filter'))
+          if (
+            content.getAttribute("data-filter") == value.toLowerCase() ||
+            value == "Galeri All"
+          ) {
+            content.classList.remove("hide");
+          }
+        });
+      };
+    });
+
+    console.log(catagoryGaleri, catagoryPost);
+
+  </script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>

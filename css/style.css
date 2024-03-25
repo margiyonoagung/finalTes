@@ -1,0 +1,110 @@
+:root {
+  --primary: #acffe3;
+  --bg: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: linear-gradient(#d2f3f8);
+  color: black;
+  padding: 2rem 2rem;
+  margin: 2rem;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: #d9d9d9;
+  border-bottom: 1px solid #8be8d5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo img {
+  font-weight: 4rem;
+  height: 4rem;
+  object-position: contain;
+}
+
+.navbar .navbar-nav a {
+  color: #040404;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #040404;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* media queris */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .kotakKepsek,
+  .kotakWaka {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* gap: 2rem;
+        padding-bottom: 2rem; */
+  }
+
+  .cardVisiMisi {
+    padding: 2rem;
+    font-size: smaller;
+  }
+}

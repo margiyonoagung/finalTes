@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/backgroundHome.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-box {
+  height: 30vh;
+  width: 70vw;
+  margin: 0 15rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #d9d9d9b2;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-box h2 {
+  font-size: 4em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-box p {
+  font-size: 2em;
+}
+
+.box-btn {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.box-btn .cta-btn {
+  background: #f58634;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.box-btn .cta-btn:hover {
+  background: #f58434bb;
+}
+*/
+  
+  /* About Section */
+  .about {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.about-box {
+  margin: 0 8rem;
+  display: flex;
+  padding: 2rem;
+  background-color: #4ccd99d5;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.about h2 {
+  color: #000;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: #4ccd99;
+}
+
+.about .about-container {
+  display: flex;
+}
+
+.about .about-container .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .about-container .about-img img {
+  width: 100%;
+}
+
+.about .about-container .content {
+  width: 60%;
+  padding: 0 1rem;
+  justify-content: center;
+}
+
+.about .about-container .content p {
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.about .about-container .content p span {
+  font-size: 1.8em;
+  font-weight: 900;
+}
+
+/* media queris */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .about .about-container .about-img {
+    flex: 0;
+  }
+
+  .about .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .about-container .content {
+    width: 100%;
+    justify-content: center;
+  }
+}
